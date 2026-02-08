@@ -1,4 +1,6 @@
 {
     "workbench.startupEditor": "readme",
-    "workbench.editor.enablePreview": true
+    "workbench.editor.enablePreview": true,
+    "python-envs.defaultEnvManager": "ms-python.python:system",
+    "python-envs.pythonProjects": []
 }

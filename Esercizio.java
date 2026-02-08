@@ -1,6 +1,5 @@
 //LEGGERE LE ISTRUZIONI NEL FILE README.md
 
-//Import di Classi Java necessarie al funzionamento del programma
 import java.util.Scanner;
 
 // Classe principale, con metodo main
@@ -8,18 +7,31 @@ class Esercizio {
     // Il programma parte con una chiamata a main().
     public static void main(String args[])
     {
-        //Variabili del programma
-        String nome;
-
         //Creo l'oggetto in per l'input da tastiera
         Scanner in = new Scanner( System.in );
 
-        //Leggo l'input da tastiera
-        System.out.print("Inserisci il tuo nome: ");
-        nome = in.nextLine();
+        Lista<Integer> lista = new Lista<>();
 
-        //Output del nome acquisito da tastiera
-        System.out.println("Ciao "+nome+"!");
+        lista.aggiungiInTesta(6);
+        lista.aggiungiInTesta(5);
+        lista.aggiungiInTesta(4);
+        
+        lista.aggiungiInCoda(20);
+        lista.aggiungiInCoda(21);
+        lista.aggiungiInCoda(22);
+
+        lista.aggiungiInPosizione(3, 0);
+        lista.aggiungiInPosizione(10, 4);
+        lista.aggiungiInPosizione(11, 5);
+        lista.aggiungiInPosizione(30, 9);
+
+        System.out.println("Lista:" +lista.toString() );
+        System.out.println("Testa: "+lista.leggiTesta());
+        System.out.println("Coda: "+lista.leggiCoda());
+        System.out.println("Elemento "+3+": "+ lista.leggiInPosizione(3));
+        System.out.println("Size: "+ lista.size());
+
+
     }
 }
 
